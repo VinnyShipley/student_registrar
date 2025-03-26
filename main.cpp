@@ -23,6 +23,6 @@ int main() {
 
 	printStudentProfile(student1);
 
-	
+	return 0;
 
 };
