@@ -12,7 +12,7 @@ void printStudentProfile(const StudentProfile& student) {
 	
 
 	cout << "Student ID: " << student.getStudentID() << endl;
-	cout << "Student Name: " << student.getFirstName() << endl;
+	cout << "Student Name: " << student.getFirstName() << " " << student.getLastName() << endl;
 	cout << "Student E-mail Address: " << student.getEmail() << endl;
 	cout << "Student Age: " << student.getAge() << endl;
 	
