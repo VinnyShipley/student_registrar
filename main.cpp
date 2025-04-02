@@ -17,11 +17,10 @@ int main() {
 		"A5,[firstname],[lastname],[emailaddress],[age], [numberofdaystocomplete3courses],SOFTWARE"
 	};
 
+	Roster classRoster(studentData, 5);
 
-
-	StudentProfile student1("A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY");
-
-	printStudentProfile(student1);
+	cout << "Initial Class Roster:\n";
+	classRoster.printAll();
 
 	return 0;
 

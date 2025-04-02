@@ -1,12 +1,26 @@
 #pragma once
 
+#include "student.h"
+
+#include <string>
+#include <vector>
+
+
+
 using namespace std;
 
 
 class Roster {
+
+private:
+	vector<StudentProfile*> classRosterArray;
+	int studentCount;
 	
-	public:
-		// Create the array of dynamic pointers here
-		// Will hold a collection of StudentProfile objects eventually
-		// Form is created here, objects are going to be created in the roster.cpp file
+public:
+	Roster(const string studentData[], int size);
+	~Roster();
+
+	void add(string studentData);
+	void remove(string studentID);
+	void printAll();
 };

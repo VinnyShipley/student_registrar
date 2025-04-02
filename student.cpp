@@ -7,7 +7,7 @@
 using namespace std;
 
 // Print student profile function
-void printStudentProfile(const StudentProfile& student) {
+void print(StudentProfile& student) {
 
 	
 

@@ -124,5 +124,7 @@ class StudentProfile {
 			this->degreeProgram = degreeProgram;
 		};
 
+		// Print indivisual Student profile
+		void print(const StudentProfile& student) const;
+
 };
-		void printStudentProfile(const StudentProfile& student);
