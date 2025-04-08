@@ -20,7 +20,12 @@ public:
 	Roster(const string studentData[], int size);
 	~Roster();
 
+	string getStudentIDAt(int index);
+	int getClassSize();
+
+
 	void add(string studentData);
 	void remove(string studentID);
+	void printStudent(string studentID);
 	void printAll();
 };

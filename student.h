@@ -40,7 +40,6 @@ class StudentProfile {
 
 			getline(ss, temp, ',');
 
-			cout << "Converting age from: [" << temp << "]" << endl;
 			try {
 				age = stoi(temp);
 			}
@@ -150,6 +149,7 @@ class StudentProfile {
 			cout << endl;
 
 			cout << "Major: " << this->getDegreeProgram() << endl;
+			cout << endl;
 		};
 
 };

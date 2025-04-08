@@ -41,12 +41,36 @@ void Roster::remove(string studentID) {
 		};
 	};
 
-		if (!found) {
-			cout << "Error: Student with ID " << studentID << " not found." << endl;
+	if (!found) {
+		cout << "Error: Student with ID " << studentID << " not found." << endl;
+	};
+
+};
+
+
+// Pulls Student ID for printing specific profile in main
+string Roster::getStudentIDAt(int index) {
+	if (index >= 0 && index < studentCount) {
+		return classRosterArray[index]->getStudentID();
+	}
+	return "";
+};
+
+// Grabs Roster Size
+int Roster::getClassSize() {
+	return classRosterArray.size();
+};
+
+
+// Prints individul Student Profile
+void Roster::printStudent(string studentID) {
+	for (StudentProfile* student : classRosterArray) {
+		if (student->getStudentID() == studentID) {
+			student->print();
+			return;
 		};
-
-}
-
+	};
+};
 
 // Prints Roster Table
 void Roster::printAll() {
