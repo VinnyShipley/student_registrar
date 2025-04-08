@@ -16,6 +16,11 @@ int main() {
 
 	Roster classRoster(studentData, 4);
 
+	cout << "Programming Language Used: C++\n";
+	cout << "Student ID: 012293932\n";
+	cout << "Student Name: Vincent Shipley\n";
+	cout << endl;
+
 	// Print the initial class roster
 	cout << "Initial Class Roster:\n";
 	classRoster.printAll();
@@ -27,37 +32,37 @@ int main() {
 	while (running) {
 		cout << "What would you like to do?\n";
 		cout << "Options:\n";
-		cout << "1. Add a student: Add\n";
-		cout << "2. Remove a student: Remove \n";
-		cout << "3. Print Single Student: Print \n";
-		cout << "3. Print all students: Print All\n";
-		cout << "4. Exit: Exit\n";
+		cout << "1. Add a student\n";
+		cout << "2. Remove a student\n";
+		cout << "3. Print Single Student\n";
+		cout << "4. Print all students\n";
+		cout << "5. Exit\n";
 
 		getline(cin, command);
 
 
-		if (command == "Add") {
+		if (command == "1") {
 			string studentInfo;
 			cout << "Enter student information: ";
 			getline(cin, studentInfo);
 			classRoster.add(studentInfo);
 		}
-		else if (command == "Remove") {
+		else if (command == "2") {
 			string studentID;
 			cout << "Enter student ID to remove: ";
 			getline(cin, studentID);
 			classRoster.remove(studentID);
 		}
-		else if (command == "Print") {
+		else if (command == "3") {
 			string studentID;
 			cout << "Enter student ID to print: ";
 			getline(cin, studentID);
 			classRoster.printStudent(studentID);
 		}
-		else if (command == "Print All") {
+		else if (command == "4") {
 			classRoster.printAll();
 		}
-		else if (command == "Exit") {
+		else if (command == "5") {
 			running = false;
 			cout << "Exiting program.\n";
 		}
