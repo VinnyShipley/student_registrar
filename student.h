@@ -39,9 +39,20 @@ class StudentProfile {
 			getline(ss, email, ',');
 
 			getline(ss, temp, ',');
-			age = stoi(temp);
 
-			daysToComplete.clear();
+			cout << "Converting age from: [" << temp << "]" << endl;
+			try {
+				age = stoi(temp);
+			}
+			catch (const invalid_argument& e) {
+				cerr << "Invalid argument: " << e.what() << " for value: " << temp << endl;
+				age = 0;
+			}
+			catch (const out_of_range& e) {
+				cerr << "Out of range: " << e.what() << " for value: " << temp << endl;
+				age = 0;
+			}
+
 			while (getline(ss, temp, ',')) {
 				if (temp == "SECURITY" || temp == "NETWORK" || temp == "SOFTWARE") {
 					if (temp == "SECURITY") degreeProgram = DegreeProgram::SECURITY;
@@ -51,9 +62,9 @@ class StudentProfile {
 				}
 				else {
 					daysToComplete.push_back(stoi(temp));
-				}
-			}
-		}
+				};
+			};
+		};
 
 
 		// Getters
@@ -125,6 +136,20 @@ class StudentProfile {
 		};
 
 		// Print indivisual Student profile
-		void print(const StudentProfile& student) const;
+		void print() {
+
+			cout << "Student ID: " << this->getStudentID() << endl;
+			cout << "Student Name: " << this->getFirstName() << " " << this->getLastName() << endl;
+			cout << "Student E-mail Address: " << this->getEmail() << endl;
+			cout << "Student Age: " << this->getAge() << endl;
+
+			cout << "Days Left in Classes: ";
+			for (int days : this->getDaysToComplete()) {
+				cout << days << " ";
+			}
+			cout << endl;
+
+			cout << "Major: " << this->getDegreeProgram() << endl;
+		};
 
 };

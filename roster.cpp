@@ -23,7 +23,7 @@ Roster::~Roster() {
 void Roster::add(string studentData) {
 	classRosterArray.push_back(new StudentProfile(studentData));
 	cout << "Student added: ";
-	classRosterArray.back()->print(*classRosterArray.back());
+	classRosterArray.back()->print();
 }
 
 
@@ -50,7 +50,7 @@ void Roster::remove(string studentID) {
 
 // Prints Roster Table
 void Roster::printAll() {
-	for (int i = 0; classRosterArray.size(); i++) {
-		classRosterArray[i]->print(*(classRosterArray[i]));
+	for (int i = 0; i < classRosterArray.size(); i++) {
+		classRosterArray[i]->print();
 	};
 };
