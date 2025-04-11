@@ -29,4 +29,5 @@ public:
 	void printStudent(string studentID);
 	void printAll();
 	int printAverageDays(string studentID);
+	void printInvalidEmails();
 };

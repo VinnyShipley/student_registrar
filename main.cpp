@@ -38,6 +38,7 @@ int main() {
 		cout << "4. Print all students\n";
 		cout << "5. Exit\n";
 		cout << "6. Print average days in course for a student\n";
+		cout << "7. Print all invalid emails in the roster list\n";
 
 		getline(cin, command);
 
@@ -75,6 +76,9 @@ int main() {
 			if (averageDays != -1) {
 				cout << "Average days in course for student " << studentID << ": " << averageDays << endl;
 			}
+		}
+		else if (command == "7") {
+			classRoster.printInvalidEmails();
 		}
 		else {
 			cout << "Invalid command.\n";

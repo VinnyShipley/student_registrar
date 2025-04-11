@@ -93,4 +93,18 @@ int Roster::printAverageDays(string studentID) {
 	}
 	// Student not found; return a flag value like -1
 	return -1;
+};
+
+void Roster::printInvalidEmails() {
+	for (StudentProfile* student : classRosterArray) {
+		string email = student->getEmail();
+		bool hasSpace = email.find(' ') != string::npos;
+		bool hasAt = email.find('@') != string::npos;
+		bool hasDot = email.find('.') != string::npos;
+
+		if (hasSpace || !hasAt || !hasDot) {
+			cout << "Invalid email: " << email << endl;
+		}
+	}
 }
+
