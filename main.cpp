@@ -37,6 +37,7 @@ int main() {
 		cout << "3. Print Single Student\n";
 		cout << "4. Print all students\n";
 		cout << "5. Exit\n";
+		cout << "6. Print average days in course for a student\n";
 
 		getline(cin, command);
 
@@ -65,6 +66,15 @@ int main() {
 		else if (command == "5") {
 			running = false;
 			cout << "Exiting program.\n";
+		}
+		else if (command == "6") {
+			string studentID;
+			cout << "Enter student ID to print average days in course: ";
+			getline(cin, studentID);
+			int averageDays = classRoster.printAverageDays(studentID);
+			if (averageDays != -1) {
+				cout << "Average days in course for student " << studentID << ": " << averageDays << endl;
+			}
 		}
 		else {
 			cout << "Invalid command.\n";

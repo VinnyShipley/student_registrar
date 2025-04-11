@@ -50,7 +50,8 @@ void Roster::remove(string studentID) {
 
 // Pulls Student ID for printing specific profile in main
 string Roster::getStudentIDAt(int index) {
-	if (index >= 0 && index < studentCount) {
+	if (index >= 0 && index < static_cast<int>(classRosterArray.size()))
+	{
 		return classRosterArray[index]->getStudentID();
 	}
 	return "";
@@ -78,3 +79,18 @@ void Roster::printAll() {
 		classRosterArray[i]->print();
 	};
 };
+
+int Roster::printAverageDays(string studentID) {
+	for (StudentProfile* student : classRosterArray) {
+		if (student->getStudentID() == studentID) {
+			int total = 0;
+			for (int days : student->getDaysToComplete()) {
+				total += days;
+			}
+			int average = total / 3;
+			return average;
+		}
+	}
+	// Student not found; return a flag value like -1
+	return -1;
+}

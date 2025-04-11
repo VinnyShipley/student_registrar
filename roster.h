@@ -28,4 +28,5 @@ public:
 	void remove(string studentID);
 	void printStudent(string studentID);
 	void printAll();
+	int printAverageDays(string studentID);
 };

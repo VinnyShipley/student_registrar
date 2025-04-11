@@ -62,7 +62,7 @@ class StudentProfile {
 				else {
 					daysToComplete.push_back(stoi(temp));
 				};
-			};
+			}
 		};
 
 
