@@ -31,7 +31,6 @@ int main() {
 
 	while (running) {
 		cout << "What would you like to do?\n";
-		cout << "Options:\n";
 		cout << "1. Add a student\n";
 		cout << "2. Remove a student\n";
 		cout << "3. Print Single Student\n";
@@ -83,7 +82,7 @@ int main() {
 			classRoster.printInvalidEmails();
 		}
 		else if (command == "8") {
-			cout << "Enter the Degree Program you would like to see the roster for:\n";
+			cout << "Enter the Degree Program you would like to see the roster for: ";
 			string input;
 
 			getline(cin, input);
