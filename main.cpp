@@ -83,23 +83,11 @@ int main() {
 			classRoster.printInvalidEmails();
 		}
 		else if (command == "8") {
+			cout << "Enter the Degree Program you would like to see the roster for:\n";
 			string input;
-			cout << "Enter degree program (SECURITY, NETWORK, SOFTWARE): ";
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			getline(cin, input);
 
-			if (input == "SECURITY") {
-				classRoster.printByDegreeProgram("SECURITY");
-			}
-			else if (input == "NETWORK") {
-				classRoster.printByDegreeProgram("NETWORK");
-			}
-			else if (input == "SOFTWARE") {
-				classRoster.printByDegreeProgram("SOFTWARE");
-			}
-			else {
-				cout << "Invalid degree program.\n";
-			}
+			getline(cin, input);
+			classRoster.printByDegreeProgram(input);
 		}
 
 		else {

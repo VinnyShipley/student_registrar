@@ -30,5 +30,5 @@ public:
 	void printAll();
 	int printAverageDays(string studentID);
 	void printInvalidEmails();
-	void printByDegreeProgram(string degreeProgram);
+	void printByDegreeProgram(string degreeString);
 };
