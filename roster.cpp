@@ -96,15 +96,29 @@ int Roster::printAverageDays(string studentID) {
 };
 
 void Roster::printInvalidEmails() {
+	vector<string> invalidEmails;
+
 	for (StudentProfile* student : classRosterArray) {
 		string email = student->getEmail();
+
 		bool hasSpace = email.find(' ') != string::npos;
 		bool hasAt = email.find('@') != string::npos;
 		bool hasDot = email.find('.') != string::npos;
 
 		if (hasSpace || !hasAt || !hasDot) {
-			cout << "Invalid email: " << email << endl;
+			invalidEmails.push_back(email);
+		}
+	}
+
+	if (invalidEmails.empty()) {
+		cout << "No invalid emails found." << endl;
+	}
+	else {
+		cout << "Invalid emails:" << endl;
+		for (const string& email : invalidEmails) {
+			cout << "- " << email << endl;
 		}
 	}
 }
+
 
