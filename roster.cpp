@@ -123,13 +123,16 @@ void Roster::printInvalidEmails() {
 
 
 void Roster::printByDegreeProgram(string degreesString) {
+	bool found = false;
 	for (StudentProfile* student : classRosterArray) {
 		if (degreesString == student->getDegreeProgram()) {
 			student->print();
+			found = true;
 		}
-		else {
-			cout << "No students found in this degree program." << endl;
-		}
+		
+	}
+	if (found = false) {
+		cout << "No students found in the " << degreesString << " program." << endl;
 	}
 }
 
