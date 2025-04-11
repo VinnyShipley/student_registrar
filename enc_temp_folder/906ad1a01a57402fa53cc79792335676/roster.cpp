@@ -122,7 +122,7 @@ void Roster::printInvalidEmails() {
 }
 
 
-void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
+void Roster::printByDegreeProgram() {
 	for (StudentProfile* student : classRosterArray) {
 		if (student->getDegreeProgram() == "SECURITY") {
 			student->print();

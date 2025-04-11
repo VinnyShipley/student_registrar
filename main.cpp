@@ -39,6 +39,8 @@ int main() {
 		cout << "5. Exit\n";
 		cout << "6. Print average days in course for a student\n";
 		cout << "7. Print all invalid emails in the roster list\n";
+		cout << "8. Print by degree program\n";
+		cout << "Enter your command: ";
 
 		getline(cin, command);
 
@@ -80,6 +82,26 @@ int main() {
 		else if (command == "7") {
 			classRoster.printInvalidEmails();
 		}
+		else if (command == "8") {
+			string input;
+			cout << "Enter degree program (SECURITY, NETWORK, SOFTWARE): ";
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			getline(cin, input);
+
+			if (input == "SECURITY") {
+				classRoster.printByDegreeProgram("SECURITY");
+			}
+			else if (input == "NETWORK") {
+				classRoster.printByDegreeProgram("NETWORK");
+			}
+			else if (input == "SOFTWARE") {
+				classRoster.printByDegreeProgram("SOFTWARE");
+			}
+			else {
+				cout << "Invalid degree program.\n";
+			}
+		}
+
 		else {
 			cout << "Invalid command.\n";
 		}
