@@ -6,7 +6,7 @@
 
 using namespace std;
 
-//Constructor
+//Constructor -------------------------------------------------------------------
 StudentProfile::StudentProfile(string studentData) {
 	stringstream ss(studentData);
 	string temp;
@@ -45,7 +45,40 @@ StudentProfile::StudentProfile(string studentData) {
 	}
 };
 
-//Getters
+
+//Setters------------------------------------------------------------------------
+void StudentProfile::setStudentID(string studentID) {
+	this->studentID = studentID;
+};
+
+void StudentProfile::setFirstName(string firstName) {
+	this->firstName = firstName;
+};
+
+void StudentProfile::setLastName(string lastName) {
+	this->lastName = lastName;
+};
+
+void StudentProfile::setEmail(string email) {
+	this->email = email;
+};
+
+void StudentProfile::setAge(int age) {
+	this->age = age;
+};
+
+void StudentProfile::setDaysToComplete(const vector<int>& daysToComplete) {
+	this->daysToComplete = daysToComplete;
+};
+
+void StudentProfile::setDegreeProgram(DegreeProgram degreeProgram) {
+	this->degreeProgram = degreeProgram;
+};
+
+
+
+
+//Getters------------------------------------------------------------------------
 string StudentProfile::getStudentID() const {
 	return this->studentID;
 }
@@ -79,7 +112,7 @@ string StudentProfile::getDegreeProgramString() const {
 }
 
 
-
+//Prints Student Profile --------------------------------------------------------
 void StudentProfile::print() {
 
 	cout << "Student ID: " << getStudentID() << endl;
@@ -93,6 +126,6 @@ void StudentProfile::print() {
 	}
 	cout << endl;
 
-	cout << "Major: " << getDegreeProgram() << endl;
+	cout << "Major: " << getDegreeProgramString() << endl;
 	cout << endl;
 };

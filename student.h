@@ -37,34 +37,17 @@ class StudentProfile {
 		string getDegreeProgramString() const;
 		DegreeProgram getDegreeProgram() const;
 
+
+
 		//Setters
-		void setStudentID(string studentID) {
-			this->studentID = studentID;
-		};
-
-		void setFirstName(string firstName) {
-			this->firstName = firstName;
-		};
-
-		void setLastName(string lastName) {
-			this->lastName = lastName;
-		};
-
-		void setEmail(string email) {
-			this->email = email;
-		};
-
-		void setAge(int age) {
-			this->age = age;
-		};
-
-		void setDaysToComplete(const vector<int>& daysToComplete) {
-			this->daysToComplete = daysToComplete;
-		};
-
-		void setDegreeProgram(DegreeProgram degreeProgram) {
-			this->degreeProgram = degreeProgram;
-		};
+		void setStudentID(string studentID);
+		void setFirstName(string firstName);
+		void setLastName(string lastName);
+		void setEmail(string email);
+		void setAge(int age);
+		void setDaysToComplete(const vector<int>& daysToComplete);
+		void setDegreeProgram(DegreeProgram degreeProgram);
+		
 
 		// Print indivisual Student profile
 		void print();

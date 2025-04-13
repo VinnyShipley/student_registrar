@@ -70,7 +70,10 @@ void Roster::printStudent(string studentID) {
 			student->print();
 			return;
 		};
+		
 	};
+	cout << "Student not found!\n";
+	cout << endl << endl;
 };
 
 // Prints Roster Table
