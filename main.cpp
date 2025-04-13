@@ -24,7 +24,39 @@ int main() {
 	cout << "Initial Class Roster:\n";
 	classRoster.printAll();
 
-	bool running = true;
+	// Print all invalid emails
+	cout << "Displaying invalid emails:\n";
+	classRoster.printInvalidEmails();
+	cout << endl;
+
+	// Print average days in course for roster
+	cout << "Average days in course for each student:\n";
+	for (int i = 0; i < classRoster.getClassSize(); i++) {
+		string id = classRoster.getStudentIDAt(i);
+		classRoster.printAverageDays(id);
+	}
+	cout << endl;
+
+	// Print students who are enrolled in the Software degree program
+	cout << "Displaying students in degree program: SOFTWARE\n";
+	classRoster.printByDegreeProgram("SOFTWARE");
+	cout << endl;
+
+	// Remove a student with ID A3
+	cout << "Removing student with ID A3:\n";
+	classRoster.remove("A3");
+	cout << endl;
+
+	// Attempt to remove the same student again
+	cout << "Trying to remove A3 again:\n";
+	classRoster.remove("A3");
+	cout << endl;
+
+	return 0;
+};
+
+	// Interactive functionality I used for testing and I am too proud of to completely delete
+	/*bool running = true;
 	string command;
 
 
@@ -92,4 +124,4 @@ int main() {
 
 	return 0;
 
-};
+};*/

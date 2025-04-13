@@ -16,6 +16,7 @@ Roster::~Roster() {
 	for (size_t i = 0; i < classRosterArray.size(); i++) {
 		delete classRosterArray[i];
 	}
+	cout << "Roster destroyed." << endl;
 }
 
 // Adds a student to ClassRoster Array
