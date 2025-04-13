@@ -28,7 +28,7 @@ public:
 	void remove(string studentID);
 	void printStudent(string studentID);
 	void printAll();
-	int printAverageDays(string studentID);
+	void printAverageDays(string studentID);
 	void printInvalidEmails();
 	void printByDegreeProgram(string degreeString);
 };

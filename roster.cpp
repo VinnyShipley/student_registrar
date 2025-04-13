@@ -83,7 +83,7 @@ void Roster::printAll() {
 	};
 };
 
-int Roster::printAverageDays(string studentID) {
+void Roster::printAverageDays(string studentID) {
 	for (StudentProfile* student : classRosterArray) {
 		if (student->getStudentID() == studentID) {
 			int total = 0;
@@ -91,11 +91,9 @@ int Roster::printAverageDays(string studentID) {
 				total += days;
 			}
 			int average = total / 3;
-			return average;
+			cout << studentID << ": average days in course is: " << average << endl;
 		}
 	}
-	// Student not found; return a flag value like -1
-	return -1;
 };
 
 void Roster::printInvalidEmails() {
@@ -134,7 +132,7 @@ void Roster::printByDegreeProgram(string degreesString) {
 		}
 		
 	}
-	if (found = false) {
+	if (!found) {
 		cout << "No students found in the " << degreesString << " program." << endl;
 	}
 }

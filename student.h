@@ -27,6 +27,16 @@ class StudentProfile {
 		StudentProfile(string studentData);
 
 
+		//Setters
+		void setStudentID(string studentID);
+		void setFirstName(string firstName);
+		void setLastName(string lastName);
+		void setEmail(string email);
+		void setAge(int age);
+		void setDaysToComplete(const vector<int>& daysToComplete);
+		void setDegreeProgram(DegreeProgram degreeProgram);
+
+
 		// Getters
 		string getStudentID() const;
 		string getFirstName() const;
@@ -37,19 +47,9 @@ class StudentProfile {
 		string getDegreeProgramString() const;
 		DegreeProgram getDegreeProgram() const;
 
-
-
-		//Setters
-		void setStudentID(string studentID);
-		void setFirstName(string firstName);
-		void setLastName(string lastName);
-		void setEmail(string email);
-		void setAge(int age);
-		void setDaysToComplete(const vector<int>& daysToComplete);
-		void setDegreeProgram(DegreeProgram degreeProgram);
 		
 
-		// Print indivisual Student profile
+		// Print individual student profile
 		void print();
 
 };

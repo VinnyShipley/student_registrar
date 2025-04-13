@@ -115,17 +115,18 @@ string StudentProfile::getDegreeProgramString() const {
 //Prints Student Profile --------------------------------------------------------
 void StudentProfile::print() {
 
-	cout << "Student ID: " << getStudentID() << endl;
-	cout << "Student Name: " << getFirstName() << " " << this->getLastName() << endl;
-	cout << "Student E-mail Address: " << getEmail() << endl;
-	cout << "Student Age: " << getAge() << endl;
+	cout << "Student ID: " << getStudentID() << '\t';
+	cout << "Student Name: " << getFirstName() << " " << this->getLastName() << '\t';
+	cout << "Student E-mail Address: " << getEmail() << '\t';
+	cout << "Student Age: " << getAge() << '\t';
 
 	cout << "Days Left in Classes: ";
 	for (int days : getDaysToComplete()) {
 		cout << days << " ";
 	}
-	cout << endl;
+	cout << '\t';
 
-	cout << "Major: " << getDegreeProgramString() << endl;
+	cout << "Major: " << getDegreeProgramString() << '\t';
+	cout << endl;
 	cout << endl;
 };
