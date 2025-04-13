@@ -7,7 +7,7 @@ using namespace std;
 
 
 Roster::Roster(const string studentData[], int size) {
-	for (int i = 0; i < size; i++) {
+	for (size_t i = 0; i < size; i++) {
 		classRosterArray.push_back(new StudentProfile(studentData[i]));
 	};
 }
@@ -125,7 +125,7 @@ void Roster::printInvalidEmails() {
 void Roster::printByDegreeProgram(string degreesString) {
 	bool found = false;
 	for (StudentProfile* student : classRosterArray) {
-		if (degreesString == student->getDegreeProgram()) {
+		if (degreesString == student->getDegreeProgramString()) {
 			student->print();
 			found = true;
 		}
