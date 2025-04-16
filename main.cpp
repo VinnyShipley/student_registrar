@@ -47,6 +47,11 @@ int main() {
 	classRoster.remove("A3");
 	cout << endl;
 
+	// Print the class roster after removing a student
+	cout << "Class Roster after removal:\n";
+	classRoster.printAll();
+	cout << endl;
+
 	// Attempt to remove the same student again
 	cout << "Trying to remove A3 again:\n";
 	classRoster.remove("A3");
